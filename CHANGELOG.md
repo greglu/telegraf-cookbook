@@ -72,3 +72,7 @@
 # 0.8.0
 - PR#49 - Enumerate supported operating systems in metadata.rb
 - PR#50 - Feature/windows support
+
+# 0.8.1
+- Fixed an issue with :delete action for 'telegraf_outputs' resource
+- Extract the Influxdb GPG URL to an attribute
