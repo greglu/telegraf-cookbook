@@ -38,7 +38,7 @@ action :create do
         else
           baseurl 'https://repos.influxdata.com/centos/\$releasever/\$basearch/stable'
         end
-        gpgkey 'https://repos.influxdata.com/influxdb.key'
+        gpgkey node['telegraf']['key-url']
         only_if { new_resource.include_repository }
       end
     elsif node.platform_family? 'debian'
@@ -51,7 +51,7 @@ action :create do
         distribution node['lsb']['codename']
         components ['stable']
         arch 'amd64'
-        key 'https://repos.influxdata.com/influxdb.key'
+        key node['telegraf']['key-url']
         only_if { new_resource.include_repository }
       end
     elsif node.platform_family? 'windows'

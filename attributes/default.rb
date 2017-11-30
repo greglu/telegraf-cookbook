@@ -28,6 +28,8 @@ default['telegraf']['download_urls'] = {
   'windows' => 'https://dl.influxdata.com/telegraf/releases',
 }
 
+default['telegraf']['key-url'] = 'https://repos.influxdata.com/influxdb.key'
+
 # platform_family keyed download sha256 checksums
 default['telegraf']['shasums'] = {
   'debian' => '',
